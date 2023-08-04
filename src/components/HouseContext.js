@@ -11,7 +11,7 @@ const HouseContextProvider = ({children}) => {
     const [property, setProperty] = useState('Property (any)');
     const [properties, setProperties] = useState([]);
     const [price, setPrice] = useState('Price range (any)');
-    const [date, setDate] = useState('Move-in Date (any)')
+    const [date, setDate] = useState('Move-in (any)')
     const [loading, setLoading] = useState(false);
 
     //countries
