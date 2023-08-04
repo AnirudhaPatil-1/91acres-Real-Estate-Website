@@ -20,7 +20,7 @@ const Search = () => {
             <PropertyDropdown />
             <button 
             onClick={() => {handleClick()}}
-            className="bg-violet-600 hover:bg-violet-700 transition w-full lg:max-w-[150px] h-16 rounded-lg flex justify-center items-center text-white text-xl">
+            className="bg-violet-600 hover:bg-violet-700 transition w-full lg:max-w-[150px] h-16 rounded-lg flex justify-center items-center text-white text-xl ">
                 <RiSearch2Line/>
             </button>
         </div>

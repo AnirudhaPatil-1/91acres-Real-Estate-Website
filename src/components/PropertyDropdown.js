@@ -14,15 +14,15 @@ const PropertyDropdown = () => {
   return (
     <Menu as='div' className='dropdown relative'>
       <Menu.Button onClick={() => {setIsOpen(!isOpen)}} className="dropdown-btn w-full text-left  hover:bg-violet-400 hover:rounded-lg hover:text-white">
-        <RiHome5Line className=' dropdown-icon-primary' />
+        <RiHome5Line className=' dropdown-icon-primary hover:text-white' />
         <div >
           <div className='text-[15px] font-medium leading-tight'>{property}</div>
           <div className='text-[13px]'>Select property type</div>          
         </div>
           { isOpen? (
-              <RiArrowUpSLine className='dropdown-icon-secondary'/>
+              <RiArrowUpSLine className='dropdown-icon-secondary hover:text-white'/>
             ):(
-              <RiArrowDownSLine className="dropdown-icon-secondary" />
+              <RiArrowDownSLine className="dropdown-icon-secondary hover:text-white" />
             )
           }
       </Menu.Button>

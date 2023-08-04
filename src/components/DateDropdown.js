@@ -110,15 +110,15 @@ const DateDropdown = () => {
   return (
     <Menu as='div' className='dropdown relative'>
       <Menu.Button onClick={() => {setIsOpen(!isOpen)}} className="dropdown-btn w-full text-left  hover:bg-violet-400 hover:rounded-lg hover:text-white ">
-        <RiCalendarLine className=' dropdown-icon-primary' />
+        <RiCalendarLine className=' dropdown-icon-primary hover:text-white' />
         <div >
           <div className='text-[15px] font-medium leading-tight'>{date}</div>
           <div className='text-[13px]'>Choose date</div>       
         </div>
         { isOpen? (
-              <RiArrowUpSLine className='dropdown-icon-secondary'/>
+              <RiArrowUpSLine className='dropdown-icon-secondary hover:text-white'/>
             ):(
-              <RiArrowDownSLine className="dropdown-icon-secondary" />
+              <RiArrowDownSLine className="dropdown-icon-secondary hover:text-white" />
             )
           }
       </Menu.Button>
