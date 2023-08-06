@@ -4,11 +4,11 @@ import {BiBed, BiBath, BiArea} from 'react-icons/bi';
 import {RiHeart3Line } from "react-icons/ri";
 
 const House = ({house}) => {
-    const {imageLg, type, country, address, bedrooms, bathrooms, surface, price} = house;
+    const {image, type, country, address, bedrooms, bathrooms, surface, price} = house;
 
     return (
         <div className='bg-white shadow-1 pb-5 rounded-lg  w-full max-w-[300px] mx-auto cursor-pointer hover:shadow-2xl transition text-gray-600'>
-            <img className='w-full h-[150px] rounded-t-lg ' src={imageLg} alt="house img"/>
+            <img className='w-full h-[150px] rounded-t-lg ' src={image} alt="house img"/>
             <div className='p-3'>
                 <div className='flex justify-between items-center px-3'>
                     <div className='text-lg  text-violet-600 mb-4 font-bold pl-2' >${price} <span className='text-gray-500 font-light text-sm'>/month</span> </div>
