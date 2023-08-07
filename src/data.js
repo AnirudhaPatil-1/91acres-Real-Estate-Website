@@ -531,6 +531,7 @@ export const housesData = [
     surface: "3200 sq ft",
     year: "2011",
     price: "2100",
+    date: 15,
     agent: {
       image: Agent2,
       name: "Daryl Hawker",
@@ -595,7 +596,7 @@ export const housesData = [
     surface: "4200 sq ft",
     year: "2016",
     price: "1700",
-    date: "5",
+    date: "10",
     agent: {
       image: Agent8,
       name: "Juana Douglass",
@@ -805,7 +806,7 @@ export const housesData = [
     surface: '1300 sq ft',
     year: '2011',
     price: '3100',
-    date: '30',
+    date: '23',
     agent: {
       image: Agent4,
       name: 'Kaitlyn Gonzalez',
@@ -847,7 +848,7 @@ export const housesData = [
     surface: '1300 sq ft',
     year: '2011',
     price: '1300',
-    date: '30',
+    date: '13',
     agent: {
       image: Agent4,
       name: 'Kaitlyn Gonzalez',
@@ -1085,7 +1086,6 @@ export const housesData = [
       name: 'Grover Robinson',
       phone: '0123 456 78910',
     },
-  },
-  
+  }, 
 
 ];
