@@ -52,6 +52,6 @@ By adopting action-based development practices, I was able to demonstrate strong
 
 [Hosted Website Link](https://91acres.netlify.app/)
 
-##Contributing
+## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or improvements, feel free to open an issue or submit a pull request.
