@@ -52,4 +52,6 @@ By adopting action-based development practices, I was able to demonstrate strong
 
 [Hosted Website Link](https://91acres.netlify.app/)
 
-Replace "link_to_image", "your_username", and "your-hosted-website-link.com" with the appropriate image link, your GitHub username, and the actual hosted link of your website.
+##Contributing
+
+Contributions are welcome! If you have any ideas, suggestions, or improvements, feel free to open an issue or submit a pull request.
