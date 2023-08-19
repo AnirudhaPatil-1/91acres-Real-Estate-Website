@@ -1,5 +1,3 @@
-Sure! Here's the content formatted as a GitHub README.md file:
-
 #  91acres - Real Estate Responsive Website
 
 ## Hosted Link
