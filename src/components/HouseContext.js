@@ -11,7 +11,8 @@ const HouseContextProvider = ({children}) => {
     const [property, setProperty] = useState('Property (any)');
     const [properties, setProperties] = useState([]);
     const [price, setPrice] = useState('Price range (any)');
-    const [date, setDate] = useState('Move-in (any)')
+    const [startDate, setStartDate] = useState('Rent Date (any)')
+    // const [startDate, setStartDate] = useState('Date (any)')
     const [loading, setLoading] = useState(false);
 
     //countries
@@ -27,7 +28,7 @@ const HouseContextProvider = ({children}) => {
 
         setCountries(uniqueCountries);
 
-    }, []);
+    }, [houses]);
 
     //properties
     useEffect(() => {
@@ -42,7 +43,7 @@ const HouseContextProvider = ({children}) => {
 
         setProperties(uniqueProperties);
 
-    }, []);
+    },[houses] );
 
     const handleClick = () => {
 
@@ -61,7 +62,7 @@ const HouseContextProvider = ({children}) => {
         // console.log(minPrice);
         const maxPrice = parseInt(price.split(' ')[2]);
 
-        const dateSelected = parseInt(date);
+        const dateSelected = parseInt(startDate);
         // console.log(dateSelected);
     
         // console.log(maxPrice);
@@ -72,40 +73,41 @@ const HouseContextProvider = ({children}) => {
         const newHouses = housesData.filter((house) => {
             const housePrice = parseInt(house.price);
             // console.log(housePrice);
-            const houseDate = parseInt(house.date);
+            const houseAvailableDate = parseInt(house.date);
             // console.log(`houseDate: ${houseDate}`);
 
-            if(house.country === country && house.type === property && housePrice >= minPrice && housePrice <= maxPrice && houseDate >= dateSelected) {
+            if(house.country === country && house.type === property && housePrice >= minPrice && housePrice <= maxPrice && houseAvailableDate >= dateSelected) {
                 return house; 
             }
 
             //if all values are default
-            if(isDefault(country) && isDefault(property) && isDefault(price) && isDefault(date)){
+            if(isDefault(country) && isDefault(property) && isDefault(price) && isDefault(startDate)){
                 return house;
             }
 
             //if country is not default
-            if(!isDefault(country) && isDefault(price) && isDefault(price) && isDefault(date) ){
+            if(!isDefault(country) && isDefault(price) && isDefault(price) && isDefault(startDate) ){
                 return house.country === country;
             }
 
             //if property is not default
-            if(!isDefault(property) && isDefault(country) && isDefault(price) && isDefault(date)){
+            if(!isDefault(property) && isDefault(country) && isDefault(price) && isDefault(startDate)){
                 return house.type === property
             }
 
             //if price is not default 
-            if(!isDefault(price) && isDefault(country) && isDefault(property) && isDefault(date) ){
+            if(!isDefault(price) && isDefault(country) && isDefault(property) && isDefault(startDate) ){
                 if(house.price >= minPrice && house.price <= maxPrice){
                     return house;
                 }
             }
 
-            if(!isDefault(date) && isDefault(country) && isDefault(property) && isDefault(price) ){
-                if(houseDate >= dateSelected){
+            if(!isDefault(startDate) && isDefault(country) && isDefault(property) && isDefault(price) ){
+                if(houseAvailableDate >= dateSelected){
                     return house;
                 }
             }
+
 
         });
 
@@ -126,12 +128,12 @@ const HouseContextProvider = ({children}) => {
         properties,
         price,
         setPrice,
-        date, 
-        setDate,
+        startDate, 
+        setStartDate,
         houses,
         loading, 
         handleClick, 
-        loading,
+        
 
     }}>{children}</HouseContext.Provider>
 }
